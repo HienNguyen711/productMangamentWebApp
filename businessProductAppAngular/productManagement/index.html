@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Product management" name="description" />
+    <meta content="Hien Nguyen" name="author" />
+    <title>HM</title>
+
+    <!-- Style sheets third parties -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/toastr.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!--main css -->
+    <link href="css/app.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap-spacelab.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-84482049-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+</head>
+
+<body ng-app="productManagement">
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <a class="navbar-brand" ui-sref="home">Product Management</a>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="productList">Products List</a></li>
+
+                    <li><a ui-sref="priceAnalytics">Price Analytics</a></li>
+
+                    <li><a ui-sref="productEdit.info({productId:0})"><i class="glyphicon glyphicon-plus"></i> Add Products</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!--views-->
+    <div class="container">
+        <div ui-view></div>
+    </div>
+
+<!--footer-->
+  <div class="container text-center">
+    <hr />
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Product for Women</a></li>
+          <li><a href="#">Product for Men</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Home products</a></li>
+          <li><a href="#">Kids sector</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="#">Product Help</a></li>
+          <li><a href="#">Developer API</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-pills nav-justified">
+                <li><a href="/">© 2016 HM.</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <!-- Library Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-resource.js"></script>
+    <script src="js/angular-mocks.js"></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/ui-utils.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script src="js/toastr.js"></script>
+    <script src="js/d3.js"></script>
+    <script src="js/angular-charts.min.js"></script>
+
+    <!-- Application Script -->
+    <script src="app/app.js"></script>
+
+    <!-- Services -->
+    <script src="common/services/common.services.js"></script>
+    <script src="common/services/productResource.js"></script>
+    <script src="common/services/productResourceMock.js"></script>
+    <script src="common/services/productService.js"></script>
+
+    <!-- Product Controllers -->
+    <script src="app/products/productListCtrl.js"></script>
+    <script src="app/products/productDetailCtrl.js"></script>
+    <script src="app/products/productEditCtrl.js"></script>
+
+    <!-- Price Controllers -->
+    <script src="app/prices/priceAnalyticsCtrl.js"></script>
+
+</body>
+
+</html>

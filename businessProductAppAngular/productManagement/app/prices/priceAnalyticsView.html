@@ -1,0 +1,24 @@
+<!--priceAnalytics view with 2 charts-->
+<div class="content" style="width:1300px">
+    <div class="panel panel-primary">
+        <div class="panel-heading" style="font-size:large;text-align:center">{{title}}</div>
+
+        <div class="panel-body">
+<!--first chart-->
+            <div class="col-md-12">
+                <div ac-chart="'bar'"
+                     ac-data="dataAmount"
+                     ac-config="configAmount"
+                     class="chart"></div>
+            </div>
+<!--second chart-->
+            <div class="col-md-12">
+                <div ac-chart="'bar'"
+                     ac-data="dataPercent"
+                     ac-config="configPercent"
+                     class="chart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
